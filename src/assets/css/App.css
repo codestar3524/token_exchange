@@ -1,0 +1,63 @@
+html,body,#root,main {
+  width: 100%;
+  height:100%;
+}
+.coin-bubble {
+  position: absolute;
+}
+
+.coin-bubble:first-child {
+  bottom: 100px;
+  left: 20px;
+}
+
+.coin-bubble:nth-child(2) {
+  top: 150px;
+  right: 20px;
+  animation-delay: 1s;
+}
+
+.line-mark {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.animate-bounce {
+  animation-duration: 2s;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+.wrIndexer {
+  padding: 0 12px;
+}
+
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  button.exchange-submit {
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .coin-bubble:first-child {
+    display: none;
+  }
+  .coin-bubble:nth-child(2) {
+    display: none;
+  }
+}

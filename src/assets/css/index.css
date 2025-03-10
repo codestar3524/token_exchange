@@ -1,0 +1,288 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: transparent
+  }
+
+  body {
+    @apply bg-exchange-dark text-foreground;
+  }
+}
+
+header {
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+/* Custom styles for the exchange platform */
+.main-background {
+  background-image: linear-gradient(0deg, #0c0d16 30%, #151b22 100%);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 110%;
+  z-index: 0;
+}
+
+.token-selector {
+  @apply relative flex items-center gap-2 bg-transparent cursor-pointer p-1 rounded-md transition-all duration-300;
+}
+
+.token-selector:hover {
+  @apply bg-opacity-20 bg-white;
+}
+
+.input-send {
+  @apply bg-[#00000080] border border-gray-700 rounded-xl transition-all duration-300;
+}
+
+.input-send:focus-within {
+  @apply border-blue-500/50 shadow-md shadow-blue-500/20;
+}
+
+.input-receive {
+  @apply bg-[#00000080] border border-blue-600/30 rounded-xl transition-all duration-300;
+}
+
+.input-receive:focus-within {
+  @apply border-blue-500/50 shadow-md shadow-blue-500/20;
+}
+
+/* FIXED: Token list dropdown styling */
+.token-list {
+  @apply absolute top-4 right-0 left-0 mt-2 bg-[#1a1d2e] border border-gray-700 rounded-lg shadow-xl z-50 overflow-hidden opacity-0 pointer-events-none transition-all duration-300 translate-y-2;
+  width: 100%;
+}
+
+/* Fix the circular dependency by removing @apply visible */
+.token-list.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.token-search {
+  @apply bg-[#181c31] border-b border-gray-700 p-3;
+}
+
+.token-search input {
+  @apply w-full bg-[#242942] border-none text-white placeholder-gray-400 p-2 pl-9 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500/50;
+}
+
+.token-item {
+  @apply flex items-center justify-between px-4 py-3 hover:bg-[#242942] transition-colors cursor-pointer;
+}
+
+.token-item-active {
+  @apply bg-[#242942];
+}
+
+.token-divider {
+  @apply border-t border-gray-700 my-1 opacity-50;
+}
+
+.order-tabs {
+  @apply flex text-sm rounded-lg overflow-hidden border;
+}
+.order-tabs .order-tab:first-child {
+  border-top-left-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+.order-tabs .order-tab:last-child {
+  border-top-right-radius: 11px;
+  border-bottom-right-radius: 11px;
+}
+.order-tab {
+  @apply px-8 py-4 cursor-pointer bg-[#00000080] font-bold font-[#ffffff73];
+}
+
+.order-tab-active {
+  @apply border-[#008FDF] border-[1px] text-[#008FDF];
+}
+
+.order-tab-inactive {
+  @apply text-gray-300 transition-colors;
+}
+
+.exchange-button {
+  @apply px-6 py-3 bg-[#008FDF] text-white rounded-lg shadow-md transition-all duration-300;
+}
+
+.exchange-button:hover {
+  @apply shadow-lg shadow-blue-500/30 translate-y-[-1px];
+}
+
+.exchange-button:active {
+  @apply shadow-sm shadow-blue-500/10 translate-y-[1px];
+}
+
+.glass-panel {
+  @apply bg-opacity-10 bg-white backdrop-blur-md border border-white/10 rounded-2xl;
+}
+
+@keyframes background-wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.background-wave {
+  animation: background-wave 15s ease-in-out infinite;
+}
+
+/* Falling stars animation */
+.stars-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 3px 1px rgba(255, 255, 255, 0.3);
+  animation: shooting-star linear;
+}
+
+@keyframes shooting-star {
+  0% {
+    transform: translate(var(--startX), var(--startY)) rotate(var(--rotation)) scale(0);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(var(--startX), var(--startY)) rotate(var(--rotation)) scale(1);
+    opacity: 1;
+  }
+  90% {
+    transform: translate(var(--endX), var(--endY)) rotate(var(--rotation)) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--endX), var(--endY)) rotate(var(--rotation)) scale(0);
+    opacity: 0;
+  }
+}
+
+.destination-input {
+  @apply w-full bg-[#1c1e2a] text-white border border-red-500/30 rounded-xl p-4 pr-20 focus:outline-none focus:border-blue-500/50 transition-all duration-300;
+}
+
+/* Additional scrollbar styling */
+.scrollbar-thin {
+  scrollbar-width: thin;
+}
+
+.scrollbar-thumb-gray-700::-webkit-scrollbar-thumb {
+  background-color: rgb(55, 65, 81);
+  border-radius: 9999px;
+}
+
+.scrollbar-track-transparent::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(55, 65, 81);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
