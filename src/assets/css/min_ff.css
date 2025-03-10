@@ -1364,7 +1364,7 @@ body.index header#header>.wrapper {
 
 #header nav {
     display: flex;
-    justify-content: space-between
+    justify-content: center
 }
 
 #header .nav-right {
@@ -1377,12 +1377,14 @@ body.fc-widget-open header#header {
 
 .logo {
     color: #fff;
-    display: block;
     float: left;
     padding: 1.125em 0;
     vertical-align: middle;
     -webkit-tap-highlight-color: transparent;
     white-space: nowrap
+}
+.logo h2{
+    margin-bottom: 0 !important;
 }
 
 .logo>span {
@@ -1807,7 +1809,7 @@ ul.nav.menu li a:hover:after {
 
 @media only screen and (max-width: 740px) {
     body header#header {
-        background-color: #0c0d16;
+        background-color: #0c0d1654;
         box-shadow: 0 0 8px -2px #000;
         left: 0;
         position: fixed;
@@ -2781,7 +2783,7 @@ main .exchange-form-outer>h1 {
 }
 
 div.exchange-form-outer {
-    margin: 4.4em auto 0;
+    margin: auto;
     max-width: 860px;
     padding-bottom: 16em;
     position: relative;
@@ -4242,9 +4244,6 @@ button.btn-reverse>.hidden {
     padding-left: .5rem
 }
 
-div.exchange-form-outer {
-    width: 100%
-}
 
 .input-wabbr.toright .hint.maxmin {
     text-align: left
@@ -11123,7 +11122,7 @@ section.guides-section {
 }
 
 .main-bg-comets>.comet {
-    animation: 40s linear normal none infinite running main_comet;
+    animation: 20s linear normal none infinite running main_comet;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg' width='201' height='171' fill='none'%3E%3Cg filter='url%28%23a%29'%3E%3Ccircle cx='17.989' cy='152.505' r='4.989' fill='%23E89D67'%2F%3E%3C%2Fg%3E%3Ccircle cx='17.989' cy='152.505' r='2.993' fill='%23fff'%2F%3E%3Cpath stroke='url%28%23b%29' stroke-linecap='round' stroke-width='.5' d='M189.368 7 16.991 153.503'%2F%3E%3Cdefs%3E%3ClinearGradient id='b' x1='17.334' x2='181.538' y1='155.208' y2='16.953' gradientUnits='userSpaceOnUse'%3E%3Cstop%2F%3E%3Cstop offset='0' stop-color='%23fff'%2F%3E%3Cstop offset='1' stop-color='%23fff' stop-opacity='0'%2F%3E%3C%2FlinearGradient%3E%3Cfilter id='a' width='35.977' height='35.977' x='0' y='134.516' color-interpolation-filters='sRGB' filterUnits='userSpaceOnUse'%3E%3CfeFlood flood-opacity='0'%2F%3E%3CfeBlend in='SourceGraphic' in2='BackgroundImageFix' result='shape'%2F%3E%3CfeGaussianBlur stdDeviation='6.5'%2F%3E%3C%2Ffilter%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
     background-repeat: no-repeat;
     background-size: contain;
@@ -11143,7 +11142,7 @@ section.guides-section {
 }
 
 .main-bg-comets>.comet:nth-of-type(2) {
-    animation-delay: 7s;
+    animation-delay: 5s;
     top: 23%;
     left: 72%;
     width: 7%;
@@ -11151,13 +11150,13 @@ section.guides-section {
 }
 
 .main-bg-comets>.comet:nth-of-type(3) {
-    animation-delay: 13s;
+    animation-delay: 7s;
     top: 22%;
     left: 33%
 }
 
 .main-bg-comets>.comet:nth-of-type(4) {
-    animation-delay: 18s;
+    animation-delay: 10s;
     top: 9%;
     left: 48%;
     width: 15%;
@@ -11165,13 +11164,13 @@ section.guides-section {
 }
 
 .main-bg-comets>.comet:nth-of-type(5) {
-    animation-delay: 24s;
+    animation-delay: 16s;
     top: 2%;
     left: 76%
 }
 
 .main-bg-comets>.comet:nth-of-type(6) {
-    animation-delay: 30s;
+    animation-delay: 20s;
     top: 29%;
     left: 15%
 }

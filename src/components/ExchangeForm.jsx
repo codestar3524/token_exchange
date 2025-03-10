@@ -106,7 +106,7 @@ const ExchangeForm = () => {
 
       <div className="exchange-address-wrap">
         <div className="exchange-wallet active center">
-          <div className="wrap-header text-left">
+          <div className="wrap-header" style={{textAlign:"left"}}>
             Destination
           </div>
           <div className="field">

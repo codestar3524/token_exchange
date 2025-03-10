@@ -12,12 +12,9 @@ const Index = () => {
           <MainBackground />
           <div className="wrIndexer">
             <div className="exchange-form-outer">
-              <h1>Payrius Exchange</h1>
+              {/* <h1>Payrius Exchange</h1> */}
               <ExchangeForm />
             </div>
-            <template id="difference_tmpl" />
-            <template id="popup_warning_fee" />
-            <template id="popup_forbidden_usa" />
           </div>
         </section>
       </main>
