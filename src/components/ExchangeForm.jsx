@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import ExchangeAmounts from './ExchangeAmounts';
-// import ExchangeAddress from './ExchangeAddress';
-// import ExchangeOptions from './ExchangeOptions';
 
 const ExchangeForm = () => {
   // Initial form state
@@ -125,7 +123,7 @@ const ExchangeForm = () => {
               value={formState.destinationAddress}
               onChange={(e) => updateFormState({ destinationAddress: e.target.value })}
               placeholder={`Your ${formState.toCurrency.label} address`}
-              style={{ height: '51px' }}
+              style={{ height: '58px' }}
             ></textarea>
             <span id="receive_wallet_error" className="hint error">
               {formState.destinationAddress.length > 0 && formState.destinationAddress.length < 10 && "Invalid address"}

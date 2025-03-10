@@ -7,8 +7,8 @@ html,body,#root,main {
 }
 
 .coin-bubble:nth-of-type(1) {
-  bottom: 155px;
-  left: 20px;
+  bottom: 255px;
+  left: 100px;
 }
 
 .coin-bubble:nth-of-type(2) {
@@ -31,7 +31,7 @@ html,body,#root,main {
   animation-timing-function: ease;
 }
 .wrIndexer {
-  padding-top: 160px;
+  padding-top: 60px;
 }
 
 @keyframes bounce {
@@ -53,11 +53,8 @@ html,body,#root,main {
     margin-top: 10px;
   }
 }
-@media only screen and (max-width: 768px) {
-  .coin-bubble:nth-child(1) {
-    display: none;
-  }
-  .coin-bubble:nth-child(2) {
+@media only screen and (max-width: 1024px) {
+  .coin-bubble {
     display: none;
   }
 }
@@ -73,7 +70,7 @@ html,body,#root,main {
 }
 /* Add these styles to your existing Header.css file */
 .exchange-form {
-  margin: 0 20px;
+  margin: 70px 20px 100px 20px;
 }
 /* 3D Coin Styles */
 .coin-container {
@@ -181,7 +178,7 @@ html,body,#root,main {
 
 .wave2 {
   /* Second wave SVG */
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%2368e0cf' fill-opacity='0.8' d='M0,192L24,170.7C48,149,96,107,144,106.7C192,107,240,149,288,144C336,139,384,85,432,69.3C480,53,528,75,576,112C624,149,672,203,720,240C768,277,816,299,864,266.7C912,235,960,149,1008,101.3C1056,53,1104,43,1152,42.7C1200,43,1248,53,1296,64C1344,75,1392,85,1416,90.7L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%234079cf' fill-opacity='0.8' d='M0,192L24,170.7C48,149,96,107,144,106.7C192,107,240,149,288,144C336,139,384,85,432,69.3C480,53,528,75,576,112C624,149,672,203,720,240C768,277,816,299,864,266.7C912,235,960,149,1008,101.3C1056,53,1104,43,1152,42.7C1200,43,1248,53,1296,64C1344,75,1392,85,1416,90.7L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   height: 100%;
   z-index: 3;
   bottom: -20px; /* Position so waves are visible */

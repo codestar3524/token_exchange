@@ -13,7 +13,7 @@ const MainBackground = () => {
       
       {/* Existing elements */}
       <img className="coin-bubble" width={250} src="/assets/images/Etherium-1.png" alt="" />
-      <img className="coin-bubble" width={100} src="/assets/images/Etherium-2.png" alt="" />
+      {/* <img className="coin-bubble" width={100} src="/assets/images/Etherium-2.png" alt="" /> */}
       {/* <img className="line-mark" src="/assets/images/line-mark.png" alt="" /> */}
       
       <div className="main-bg-comets">

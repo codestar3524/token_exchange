@@ -293,8 +293,6 @@ h3 {
     background-clip: text;
     background-image: linear-gradient(180deg, #FFF 0, #B1DAFF 100%);
     font-weight: 700;
-    line-height: 1.15em;
-    margin-bottom: .7em
 }
 
 h1 {
@@ -1354,7 +1352,6 @@ sup {
 body header#header {
     position: relative;
     z-index: 2147483610;
-    background-color:#141929;
 }
 
 body.index header#header>.wrapper {
@@ -1365,7 +1362,8 @@ body.index header#header>.wrapper {
 
 #header nav {
     display: flex;
-    justify-content: center
+    justify-content: space-between;
+    border-bottom:1px solid rgba(255,255,255,0.2);
 }
 
 #header .nav-right {
@@ -2200,7 +2198,6 @@ body>footer a {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0 auto;
-    max-width: 1280px;
     padding: 0 2em;
     width: 100%
 }
