@@ -94,7 +94,15 @@
 }
 
 /* Custom styles for the exchange platform */
-
+.main-background {
+  background-image: linear-gradient(0deg, #0c0d16 30%, #151b22 100%);
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 110%;
+  z-index: 0;
+}
 
 .token-selector {
   @apply relative flex items-center gap-2 bg-transparent cursor-pointer p-1 rounded-md transition-all duration-300;

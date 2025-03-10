@@ -9,8 +9,8 @@ const Index = () => {
       <main>
         <section id="index_main" className="main-section withheader darkbg">
           <Header />
-          <MainBackground />
           <div className="wrIndexer">
+          <MainBackground />
             <div className="exchange-form-outer">
               {/* <h1>Payrius Exchange</h1> */}
               <ExchangeForm />

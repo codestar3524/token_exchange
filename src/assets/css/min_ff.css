@@ -1353,7 +1353,8 @@ sup {
 
 body header#header {
     position: relative;
-    z-index: 2147483610
+    z-index: 2147483610;
+    background-color:#141929;
 }
 
 body.index header#header>.wrapper {
@@ -1808,18 +1809,7 @@ ul.nav.menu li a:hover:after {
 }
 
 @media only screen and (max-width: 740px) {
-    body header#header {
-        background-color: #0c0d1654;
-        box-shadow: 0 0 8px -2px #000;
-        left: 0;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        -webkit-transition: background-color .3s ease, box-shadow .3s ease;
-        -o-transition: background-color .3s ease, box-shadow .3s ease;
-        transition: background-color .3s ease, box-shadow .3s ease;
-        will-change: background-color, box-shadow
-    }
+   
 
     body header#header>.wrapper,
     body.index header#header>.wrapper {
@@ -2219,8 +2209,8 @@ body>footer a {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #151b23;
-    background-image: linear-gradient(0deg, #0c0d16, #151b23);
+    /* background-color: #151b23;
+    background-image: linear-gradient(0deg, #0c0d16, #151b23); */
     background-size: cover;
     background-position: bottom;
     background-repeat: no-repeat;
@@ -4755,28 +4745,13 @@ section.last-orders {
     transform: translateY(-50%)
 }
 
-@media only screen and (max-width: 740px) {
-    .main-section.withheader {
-        padding-top: 55px
-    }
-}
 
-@media only screen and (min-width: 700px) and (max-width:740px) {
-    div.exchange-form-outer {
-        margin-top: 0;
-        padding-top: 1.5em
-    }
-}
 
 @media only screen and (max-width: 600px) {
     .exchange-form>div.exchange-amounts {
         flex-direction: column
     }
 
-    div.exchange-form-outer {
-        padding-bottom: 10em;
-        margin-top: 3em
-    }
 
     .input-wabbr>.ui-select-outer {
         align-items: stretch;
