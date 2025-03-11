@@ -1,14 +1,18 @@
-html,body,#root,main {
+html,
+body,
+#root,
+main {
   width: 100%;
   /* height:100%; */
 }
+
 .coin-bubble {
   position: absolute;
 }
 
 .coin-bubble:nth-of-type(1) {
-  bottom: 255px;
-  left: 100px;
+  bottom: 210px;
+  left: -215px;
 }
 
 .coin-bubble:nth-of-type(2) {
@@ -30,6 +34,7 @@ html,body,#root,main {
   animation-iteration-count: infinite;
   animation-timing-function: ease;
 }
+
 .wrIndexer {
   padding-top: 60px;
 }
@@ -53,6 +58,7 @@ html,body,#root,main {
     margin-top: 10px;
   }
 }
+
 @media only screen and (max-width: 1024px) {
   .coin-bubble {
     display: none;
@@ -66,12 +72,14 @@ html,body,#root,main {
   top: 0;
   width: 100%;
   height: 110%;
-  z-index: 0;
+  z-index: -1;
 }
+
 /* Add these styles to your existing Header.css file */
 .exchange-form {
   margin: 70px 20px 100px 20px;
 }
+
 /* 3D Coin Styles */
 .coin-container {
   display: inline-block;
@@ -123,10 +131,12 @@ html,body,#root,main {
 .coin-edge {
   position: absolute;
   width: 100%;
-  height: 2px; /* thickness - smaller for header */
+  height: 2px;
+  /* thickness - smaller for header */
   transform: rotateX(90deg);
   transform-style: preserve-3d;
-  top: calc(50% - 1px); /* Shift up by half of height for perfect centering */
+  top: calc(50% - 1px);
+  /* Shift up by half of height for perfect centering */
   left: 0;
 }
 
@@ -152,7 +162,8 @@ html,body,#root,main {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 40%; /* Adjusted height for waves */
+  height: 40%;
+  /* Adjusted height for waves */
   z-index: 0;
   overflow: hidden;
   opacity: 0.6;
@@ -161,10 +172,13 @@ html,body,#root,main {
 /* Using provided wave SVGs with vertical animation */
 .wave {
   position: absolute;
-  width: 102%; /* Slightly wider than 100% to prevent edge gaps */
-  left: -1%; /* Shift slightly to hide edges */
+  width: 102%;
+  /* Slightly wider than 100% to prevent edge gaps */
+  left: -1%;
+  /* Shift slightly to hide edges */
   background-repeat: no-repeat;
-  background-size: cover; /* Full width and height */
+  background-size: cover;
+  /* Full width and height */
 }
 
 .wave1 {
@@ -172,7 +186,8 @@ html,body,#root,main {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230099ff' fill-opacity='0.7' d='M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   height: 100%;
   z-index: 4;
-  bottom: -20px; /* Position so waves are visible */
+  bottom: -20px;
+  /* Position so waves are visible */
   animation: wave-up-down1 6s ease-in-out infinite;
 }
 
@@ -181,7 +196,8 @@ html,body,#root,main {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%234079cf' fill-opacity='0.8' d='M0,192L24,170.7C48,149,96,107,144,106.7C192,107,240,149,288,144C336,139,384,85,432,69.3C480,53,528,75,576,112C624,149,672,203,720,240C768,277,816,299,864,266.7C912,235,960,149,1008,101.3C1056,53,1104,43,1152,42.7C1200,43,1248,53,1296,64C1344,75,1392,85,1416,90.7L1440,96L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   height: 100%;
   z-index: 3;
-  bottom: -20px; /* Position so waves are visible */
+  bottom: -20px;
+  /* Position so waves are visible */
   animation: wave-up-down2 8s ease-in-out infinite;
   animation-delay: -3s;
 }
@@ -191,7 +207,8 @@ html,body,#root,main {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230066cc' fill-opacity='0.6' d='M0,128L30,138.7C60,149,120,171,180,197.3C240,224,300,256,360,240C420,224,480,160,540,144C600,128,660,160,720,149.3C780,139,840,85,900,101.3C960,117,1020,203,1080,240C1140,277,1200,267,1260,240C1320,213,1380,171,1410,149.3L1440,128L1440,320L1410,320C1380,320,1320,320,1260,320C1200,320,1140,320,1080,320C1020,320,960,320,900,320C840,320,780,320,720,320C660,320,600,320,540,320C480,320,420,320,360,320C300,320,240,320,180,320C120,320,60,320,30,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
   height: 100%;
   z-index: 2;
-  bottom: -30px; /* Position so waves are visible */
+  bottom: -30px;
+  /* Position so waves are visible */
   animation: wave-up-down3 10s ease-in-out infinite;
   animation-delay: -5s;
 }
@@ -199,28 +216,204 @@ html,body,#root,main {
 
 /* Vertical wave animations */
 @keyframes wave-up-down1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-15px);
   }
 }
 
 @keyframes wave-up-down2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
 }
 
 @keyframes wave-up-down3 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
+  }
+}
+
+
+.qr-scanner-modal {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-scanner-container {
+  width: 90%;
+  max-width: 500px;
+  background-color: #121623;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.close-scanner {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10;
+  padding: 5px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: background-color 0.2s;
+}
+
+.close-scanner:hover {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+.scanner-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.scanner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.scanner-frame {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #4dabf7;
+  border-radius: 10px;
+  position: relative;
+}
+
+.scanner-frame:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #4dabf7;
+  animation: scan 2s infinite linear;
+}
+
+@keyframes scan {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: 100%;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+.scanner-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-camera {
+  background-color: #4dabf7;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.toggle-camera:hover {
+  background-color: #3a8ac7;
+}
+
+.permission-error,
+.error-message {
+  padding: 20px;
+  color: white;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Media queries for better mobile support */
+@media (max-width: 768px) {
+  .qr-scanner-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .scanner-wrapper {
+    height: 250px;
+  }
+
+  .scanner-frame {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scanner-wrapper {
+    height: 220px;
+  }
+
+  .scanner-frame {
+    width: 160px;
+    height: 160px;
   }
 }

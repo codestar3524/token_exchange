@@ -2199,7 +2199,8 @@ body>footer a {
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0 2em;
-    width: 100%
+    width: 100%;
+    max-width: 1280px;
 }
 
 .main-section {
@@ -6995,10 +6996,9 @@ nav.auth-nav>button.active:nth-of-type(2)~i {
     position: fixed;
     display: block;
     top: 0;
-    bottom: 0;
-    width: 75%;
+    width: 65%;
+    height: 100%;
     z-index: 1;
-    opacity: 0;
     transition: all .3s ease 0s;
     -webkit-transition: all .3s ease 0s;
     -moz-transition: all .3s ease 0s;
@@ -9782,7 +9782,7 @@ section.blog-paginates {
 }
 
 .blog-article-content {
-    max-width: 60em;
+    /* max-width: 60em; */
     margin-top: 4em
 }
 

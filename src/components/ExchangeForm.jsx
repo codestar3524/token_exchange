@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ExchangeAmounts from './ExchangeAmounts';
+import QRCodeScanner from './QRCodeScanner';
 
 const ExchangeForm = () => {
   // Initial form state
@@ -14,6 +15,8 @@ const ExchangeForm = () => {
     exchangeRate: 20.687412, // Example fixed rate
     isValid: false
   });
+
+  const [showScanner, setShowScanner] = useState(false);
 
   // Handler for updating form state
   const updateFormState = (updates) => {
@@ -85,6 +88,18 @@ const ExchangeForm = () => {
     });
   };
 
+  // Handle QR scan result
+  const handleQRScan = (result) => {
+    if (result) {
+      // Check if the scanned text is a valid cryptocurrency address
+      // This is a simple check - in a real app, you would validate against the specific coin's address format
+      if (result.length > 10) {
+        updateFormState({ destinationAddress: result });
+      }
+    }
+    setShowScanner(false);
+  };
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -102,9 +117,16 @@ const ExchangeForm = () => {
         handleSwapCurrencies={handleSwapCurrencies}
       />
 
+      {showScanner && (
+        <QRCodeScanner
+          onScan={handleQRScan}
+          onClose={() => setShowScanner(false)}
+        />
+      )}
+
       <div className="exchange-address-wrap">
         <div className="exchange-wallet active center">
-          <div className="wrap-header" style={{textAlign:"left"}}>
+          <div className="wrap-header" style={{ textAlign: "left" }}>
             Destination
           </div>
           <div className="field">
@@ -148,6 +170,7 @@ const ExchangeForm = () => {
                 className="ico scanqr hoverhl"
                 id="wallet_scanqr"
                 title="Scan QR code"
+                onClick={() => setShowScanner(true)}
               ></button>
               <button
                 type="button"
@@ -216,7 +239,7 @@ const ExchangeForm = () => {
 
       <div className="exchange-wrapflex">
         <div className="exchange-option">
-        <p>Order type</p>
+          <p>Order type</p>
           <div className="exchange-option-inner">
             <label className="radioselect">
               <input
@@ -249,14 +272,14 @@ const ExchangeForm = () => {
           </span>
         </div>
 
-          <button
-            id="exchange_submit"
-            className={`exchange-submit ${!formState.isValid ? 'disabled' : ''}`}
-            disabled={!formState.isValid}
-            type="submit"
-          >
-            <span>Exchange now</span>
-          </button>
+        <button
+          id="exchange_submit"
+          className={`exchange-submit ${!formState.isValid ? 'disabled' : ''}`}
+          disabled={!formState.isValid}
+          type="submit"
+        >
+          <span>Exchange now</span>
+        </button>
       </div>
 
       <div className="exchange-terms">
@@ -268,9 +291,11 @@ const ExchangeForm = () => {
       <div className="exchange-terms">
         By using the site and creating an exchange, you agree to the
         Payrius'{" "}
-        <a href="#terms-of-service">Terms of Services</a> and{" "}
-        <a href="#privacy-policy">Privacy Policy.</a>
+        <a href="/terms-of-service">Terms of Services</a> and{" "}
+        <a href="/privacy-policy">Privacy Policy.</a>
       </div>
+      <img className="coin-bubble" width={250} src="/assets/images/Etherium-1.png" alt="" />
+
     </form>
   );
 };
