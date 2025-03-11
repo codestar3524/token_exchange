@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Icons';
     font-display: block;
-    src: url("../fonts/fficons/fficons.woff2") format("woff2") format("truetype")
+    src: url("../fonts/fficons/fficons.woff2") format("woff2")
 }
 
 @font-face {
