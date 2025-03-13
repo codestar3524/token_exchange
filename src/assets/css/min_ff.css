@@ -120,7 +120,7 @@ body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    background-color: #444 !important;
+    background-color: #0C0D16 !important;
     background-size: cover;
     color: #fff;
     font-size: 16px;
@@ -4704,9 +4704,8 @@ section.last-orders {
         border-radius: 0;
         display: flex;
         flex-direction: column;
-        font-size: 1.4em;
-        height: 100%;
-        max-width: none;
+        font-size: 1em;
+        max-width: 90%;
         padding: 2em 1.8em
     }
 
@@ -6545,16 +6544,23 @@ nav.auth-nav>button.active:nth-of-type(2)~i {
 
 .popup-wrap {
     display: flex;
-    height: 100%;
     overflow: auto;
     pointer-events: none;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: opacity .2s ease-in-out;
     -o-transition: opacity .2s ease-in-out;
-    transition: opacity .2s ease
+    transition: opacity .2s ease;
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
-
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .popup.active>.popup-wrap,
 .popup.active>.popup-bg {
     opacity: 1;
@@ -6579,7 +6585,6 @@ nav.auth-nav>button.active:nth-of-type(2)~i {
     max-width: 650px;
     padding: 2.5em 2.5em 2em;
     pointer-events: auto;
-    position: relative;
     text-align: center;
     width: 100%;
     border-radius: .5em;

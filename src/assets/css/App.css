@@ -63,6 +63,9 @@ main {
   .coin-bubble {
     display: none;
   }
+  .popup-content {
+    width: 90%;
+  }
 }
 
 .main-background {
@@ -71,7 +74,7 @@ main {
   position: absolute;
   top: 0;
   width: 100%;
-  height: 110%;
+  height: 120%;
   z-index: -1;
 }
 
@@ -89,8 +92,8 @@ main {
 
 .scene {
   perspective: 800px;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
 }
 
 .coin {
@@ -404,6 +407,10 @@ main {
   .scanner-frame {
     width: 180px;
     height: 180px;
+  }
+  .exchange-different-faq {
+    max-height: 90vh;
+    overflow-y: auto;
   }
 }
 

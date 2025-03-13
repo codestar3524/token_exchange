@@ -14,7 +14,7 @@ const Index = () => {
               </div>
             </div>
           </div>
-          <h2 className='mb-0'>Payrius Exchange</h2>
+          <h2 className='mb-0 text-3xl'>Payrius Exchange</h2>
         </div>
         <ExchangeForm />
       </div>

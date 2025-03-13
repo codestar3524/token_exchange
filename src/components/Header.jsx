@@ -3,8 +3,7 @@ import LeftMenu from './LeftMenu';
 
 const Header = () => {
   return (
-    <header id="header">
-      <div className="wrapper">
+    <header id="header" className='px-3'>
         <LeftMenu />
         <nav>
           <a href="/" id="logo" className="logo darkbg">
@@ -27,7 +26,6 @@ const Header = () => {
           </div>
         </nav>
         <div className="shadow-body" />
-      </div>
     </header>
   );
 };
